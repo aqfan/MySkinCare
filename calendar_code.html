@@ -25,12 +25,11 @@
 	var prev = null;
 	var curr = null;
 	var next = null;
-
 	function doOnLoad() {
 		scheduler.config.multi_day = true;
 		scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
-		scheduler.init('scheduler_here',new Date(2017,9,11),"week");
+		scheduler.init('scheduler_here',new Date(),"week");
 		scheduler.load("data/events.xml");
 
 		var calendar = scheduler.renderCalendar({
@@ -51,6 +50,7 @@
 	<div style='float: left; padding:10px;'>
 		<div id="cal_here" style='width:250px;'></div>
 	</div>
+
 	<div id="scheduler_here" class="dhx_cal_container" style='width:auto; height:100%;'>
 		<div class="dhx_cal_navline">
 			<div class="dhx_cal_prev_button">&nbsp;</div>
