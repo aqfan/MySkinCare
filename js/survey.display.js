@@ -118,8 +118,7 @@ function sendDataToServer(survey) {
   var moisturizer = surveyObjects.moisturizer;
   var serum = surveyObjects.serum;
   var mask = surveyObjects.mask;
-  alert(JSON.stringify(survey.data)+age
-  +problem+moisturizer+serum+mask);
+  localStorage.setItem("skin_type", JSON.stringify(problem));
 }
 
 // survey.onComplete.add(function (sender) {
