@@ -106,9 +106,10 @@ Survey.Survey.cssType = "bootstrap";
 var survey = new Survey.Model(surveyJSON);
 $("#surveyContainer").Survey({
     model:survey,
-    onComplete:sendDataToServer
+    onComplete:sendDataToServer;
 });
 function sendDataToServer(survey) {
+  window.alert("test");
   var surveyObjects = JSON.parse(JSON.stringify(survey.data));
   // alert(JSON.stringify(survey.data)+surveyObjects.age
   // +surveyObjects.problem+surveyObjects.moisturizer
@@ -118,9 +119,11 @@ function sendDataToServer(survey) {
   var moisturizer = surveyObjects.moisturizer;
   var serum = surveyObjects.serum;
   var mask = surveyObjects.mask;
+  localStorage.setItem('skin_type', JSON.stringify(surveyObjects.problem));
   alert(JSON.stringify(survey.data)+age
   +problem+moisturizer+serum+mask);
-}
+};
+
 
 // survey.onComplete.add(function (sender) {
 //     var mySurvey = sender;
