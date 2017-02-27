@@ -110,9 +110,6 @@ $("#surveyContainer").Survey({
 });
 function sendDataToServer(survey) {
   var surveyObjects = JSON.parse(JSON.stringify(survey.data));
-  // alert(JSON.stringify(survey.data)+surveyObjects.age
-  // +surveyObjects.problem+surveyObjects.moisturizer
-  // +surveyObjects.serum+surveyObjects.mask);
   var age = surveyObjects.age;
   var problem = surveyObjects.problem;
   var moisturizer = surveyObjects.moisturizer;
